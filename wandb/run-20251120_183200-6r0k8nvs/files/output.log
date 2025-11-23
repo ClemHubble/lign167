@@ -1,0 +1,62 @@
+                                                                                                          
+{'loss': 1.6237, 'grad_norm': 0.23495756089687347, 'learning_rate': 0.00019701492537313434, 'epoch': 0.02}
+{'loss': 1.5661, 'grad_norm': 0.20010288059711456, 'learning_rate': 0.000193872741555381, 'epoch': 0.03}
+{'loss': 1.4829, 'grad_norm': 0.18166030943393707, 'learning_rate': 0.00019073055773762766, 'epoch': 0.05}
+{'loss': 1.5031, 'grad_norm': 0.15365613996982574, 'learning_rate': 0.00018758837391987432, 'epoch': 0.06}
+{'loss': 1.4366, 'grad_norm': 0.15157921612262726, 'learning_rate': 0.00018444619010212098, 'epoch': 0.08}
+{'loss': 1.4181, 'grad_norm': 0.1254679560661316, 'learning_rate': 0.00018130400628436764, 'epoch': 0.09}
+{'loss': 1.4189, 'grad_norm': 0.13162410259246826, 'learning_rate': 0.0001781618224666143, 'epoch': 0.11}
+{'loss': 1.3961, 'grad_norm': 0.1262013167142868, 'learning_rate': 0.00017501963864886098, 'epoch': 0.13}
+{'loss': 1.4354, 'grad_norm': 0.10188192129135132, 'learning_rate': 0.0001718774548311076, 'epoch': 0.14}
+{'loss': 1.438, 'grad_norm': 0.09103942662477493, 'learning_rate': 0.0001687352710133543, 'epoch': 0.16}
+{'loss': 1.3657, 'grad_norm': 0.10596907883882523, 'learning_rate': 0.00016559308719560096, 'epoch': 0.17}
+{'loss': 1.4117, 'grad_norm': 0.09857302159070969, 'learning_rate': 0.00016245090337784762, 'epoch': 0.19}
+{'loss': 1.3903, 'grad_norm': 0.11594883352518082, 'learning_rate': 0.00015930871956009428, 'epoch': 0.2}
+{'loss': 1.3721, 'grad_norm': 0.0978318452835083, 'learning_rate': 0.00015616653574234093, 'epoch': 0.22}
+{'loss': 1.3787, 'grad_norm': 0.10703243315219879, 'learning_rate': 0.0001530243519245876, 'epoch': 0.24}
+{'loss': 1.3952, 'grad_norm': 0.10560327023267746, 'learning_rate': 0.00014988216810683425, 'epoch': 0.25}
+{'loss': 1.3797, 'grad_norm': 0.1056661531329155, 'learning_rate': 0.0001467399842890809, 'epoch': 0.27}
+{'loss': 1.3374, 'grad_norm': 0.09161806851625443, 'learning_rate': 0.00014359780047132757, 'epoch': 0.28}
+{'loss': 1.3874, 'grad_norm': 0.07480329275131226, 'learning_rate': 0.00014045561665357426, 'epoch': 0.3}
+{'loss': 1.3813, 'grad_norm': 0.08581272512674332, 'learning_rate': 0.0001373134328358209, 'epoch': 0.31}
+{'loss': 1.3265, 'grad_norm': 0.0935819000005722, 'learning_rate': 0.00013417124901806757, 'epoch': 0.33}
+{'loss': 1.3613, 'grad_norm': 0.0883714109659195, 'learning_rate': 0.0001310290652003142, 'epoch': 0.35}
+{'loss': 1.4106, 'grad_norm': 0.08198908716440201, 'learning_rate': 0.0001278868813825609, 'epoch': 0.36}
+{'loss': 1.3426, 'grad_norm': 0.08855083584785461, 'learning_rate': 0.00012474469756480755, 'epoch': 0.38}
+{'loss': 1.3619, 'grad_norm': 0.09241665154695511, 'learning_rate': 0.00012160251374705421, 'epoch': 0.39}
+{'loss': 1.3459, 'grad_norm': 0.09704937040805817, 'learning_rate': 0.00011846032992930087, 'epoch': 0.41}
+{'loss': 1.3875, 'grad_norm': 0.10111778974533081, 'learning_rate': 0.00011531814611154753, 'epoch': 0.42}
+{'loss': 1.3527, 'grad_norm': 0.09653813391923904, 'learning_rate': 0.00011217596229379418, 'epoch': 0.44}
+{'loss': 1.3353, 'grad_norm': 0.0886787548661232, 'learning_rate': 0.00010903377847604086, 'epoch': 0.46}
+{'loss': 1.3755, 'grad_norm': 0.08713917434215546, 'learning_rate': 0.0001058915946582875, 'epoch': 0.47}
+{'loss': 1.355, 'grad_norm': 0.08062824606895447, 'learning_rate': 0.00010274941084053417, 'epoch': 0.49}
+{'loss': 1.3547, 'grad_norm': 0.08071359246969223, 'learning_rate': 9.960722702278083e-05, 'epoch': 0.5}
+{'loss': 1.3544, 'grad_norm': 0.08539903908967972, 'learning_rate': 9.646504320502749e-05, 'epoch': 0.52}
+{'loss': 1.3577, 'grad_norm': 0.09515997767448425, 'learning_rate': 9.332285938727416e-05, 'epoch': 0.53}
+{'loss': 1.3552, 'grad_norm': 0.08627744019031525, 'learning_rate': 9.018067556952082e-05, 'epoch': 0.55}
+{'loss': 1.3563, 'grad_norm': 0.09709283709526062, 'learning_rate': 8.703849175176748e-05, 'epoch': 0.57}
+{'loss': 1.3574, 'grad_norm': 0.0920013040304184, 'learning_rate': 8.389630793401414e-05, 'epoch': 0.58}
+{'loss': 1.346, 'grad_norm': 0.09382853657007217, 'learning_rate': 8.075412411626081e-05, 'epoch': 0.6}
+{'loss': 1.38, 'grad_norm': 0.08368714898824692, 'learning_rate': 7.761194029850747e-05, 'epoch': 0.61}
+{'loss': 1.3723, 'grad_norm': 0.09183268994092941, 'learning_rate': 7.446975648075413e-05, 'epoch': 0.63}
+{'loss': 1.3669, 'grad_norm': 0.08880883455276489, 'learning_rate': 7.132757266300079e-05, 'epoch': 0.64}
+  File "/home/fvo/lign167/finetune.py", line 104, in <module>
+    trainer.train()
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/transformers/trainer.py", line 4071, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/accelerate/accelerator.py", line 2469, in backward
+    self.scaler.scale(loss).backward(**kwargs)
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home/fvo/anaconda3/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 886.00 MiB. GPU 0 has a total capacity of 31.74 GiB of which 473.38 MiB is free. Including non-PyTorch memory, this process has 31.27 GiB memory in use. Of the allocated memory 28.30 GiB is allocated by PyTorch, and 2.03 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
