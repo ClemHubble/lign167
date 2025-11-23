@@ -27,7 +27,7 @@ def expected_calibration_error(confidences, correctness, num_bins=15):
     return ece
 
 from huggingface_hub import login
-login("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")
+#login("") #TODO add Hugging Face Token
 
 model_name = "meta-llama/Llama-3.1-8B-Instruct"
 
@@ -40,8 +40,6 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16,
     device_map="auto"
 )
-# model.config.pad_token_id = model.config.eos_token_id
-
 
 model.eval()
 print("Model loaded.")
@@ -102,14 +100,12 @@ def score_option(model, tokenizer, prompt, letter):
     labels = full_ids.clone()
     labels[:, :prompt_ids.shape[1]] = -100   # mask out prompt tokens
 
-    # Compute loss (only on answer tokens)
+    # Compute loss 
     with torch.no_grad():
         out = model(input_ids=full_ids, labels=labels)
         nll = out.loss.item()
 
-    return -nll   # higher = better
-
-
+    return -nll 
 
 correct_count = 0
 confidences = []
