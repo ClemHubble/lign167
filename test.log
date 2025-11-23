@@ -1,0 +1,19 @@
+nohup: ignoring input
+CUDA available: True
+Device: NVIDIA GeForce RTX 5090
+Loading tokenizer...
+Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.21s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.27s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.12it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02s/it]
+Model loaded.
+Loading MedQA...
+/usr/local/lib/python3.12/dist-packages/datasets/load.py:1486: FutureWarning: The repository for bigbio/med_qa contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/bigbio/med_qa
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+Running evaluation...
+Evaluating:   0%|                                         | 0/5 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluating:  20%|██████▌                          | 1/5 [00:13<00:53, 13.50s/it]Evaluating:  40%|█████████████▏                   | 2/5 [00:26<00:39, 13.04s/it]Evaluating:  60%|███████████████████▊             | 3/5 [00:39<00:26, 13.06s/it]Evaluating:  80%|██████████████████████████▍      | 4/5 [00:52<00:13, 13.15s/it]Evaluating: 100%|█████████████████████████████████| 5/5 [01:05<00:00, 13.15s/it]Evaluating: 100%|█████████████████████████████████| 5/5 [01:05<00:00, 13.15s/it]
+----- RESULTS -----
+Accuracy: 0.6000
+ECE:      0.4642

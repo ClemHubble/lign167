@@ -1,0 +1,16 @@
+nohup: ignoring input
+CUDA available: True
+Device: NVIDIA GeForce RTX 5090
+Loading tokenizer...
+Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.16s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.15s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.16it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.02it/s]
+Model loaded.
+Loading MedQA...
+/usr/local/lib/python3.12/dist-packages/datasets/load.py:1486: FutureWarning: The repository for bigbio/med_qa contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/bigbio/med_qa
+You can avoid this message in future by passing the argument `trust_remote_code=True`.
+Passing `trust_remote_code=True` will be mandatory to load this dataset from the next major release of `datasets`.
+  warnings.warn(
+Running evaluation...
+Evaluating:   0%|                                     | 0/10178 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Evaluating:   0%|                          | 1/10178 [00:13<38:16:35, 13.54s/it]Evaluating:   0%|                          | 2/10178 [00:26<37:06:38, 13.13s/it]Evaluating:   0%|                          | 3/10178 [00:39<37:00:09, 13.09s/it]Evaluating:   0%|                          | 4/10178 [00:53<38:30:50, 13.63s/it]Evaluating:   0%|                          | 5/10178 [01:07<38:15:21, 13.54s/it]Evaluating:   0%|                          | 6/10178 [01:20<38:14:47, 13.54s/it]Evaluating:   0%|                          | 7/10178 [01:34<38:11:41, 13.52s/it]Evaluating:   0%|                          | 8/10178 [01:47<37:46:00, 13.37s/it]Evaluating:   0%|                          | 9/10178 [02:00<37:21:27, 13.23s/it]Evaluating:   0%|                         | 10/10178 [02:13<37:22:10, 13.23s/it]Evaluating:   0%|                         | 11/10178 [02:26<37:23:07, 13.24s/it]Evaluating:   0%|                         | 12/10178 [02:39<37:23:25, 13.24s/it]Evaluating:   0%|                         | 13/10178 [02:52<36:55:04, 13.07s/it]Evaluating:   0%|                         | 14/10178 [03:05<36:50:30, 13.05s/it]Evaluating:   0%|                         | 15/10178 [03:18<36:44:35, 13.02s/it]Evaluating:   0%|                         | 16/10178 [03:31<36:39:10, 12.98s/it]Evaluating:   0%|                         | 17/10178 [03:44<36:32:23, 12.95s/it]Evaluating:   0%|                         | 18/10178 [03:57<36:23:10, 12.89s/it]Evaluating:   0%|                         | 19/10178 [04:09<36:05:43, 12.79s/it]Evaluating:   0%|                         | 20/10178 [04:22<36:07:15, 12.80s/it]

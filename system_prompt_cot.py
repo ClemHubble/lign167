@@ -119,67 +119,10 @@ logs = []
 
 print("Running evaluation...")
 
-# sample_processed = processed[:30]
-# Using full processed list as per original file intent (though it had sample_processed commented out or not used in the original view? 
-# Wait, the original file view showed `sample_processed = processed[:30]` was NOT present in the loop in `system_prompt_cot.py`?
-# Let's check the `view_file` output for `system_prompt_cot.py` again.
-# Ah, I see `sample_processed = processed[:30]` in `system_prompt_cot.py` in the previous `view_file` output (Step 66).
-# Wait, Step 66 output shows `sample_processed = processed[:30]` at line 120. 
-# So `system_prompt_cot.py` IS also a test file or at least restricted? 
-# The user said "modifying @[lign167/system_prompt_cot.py] and @[lign167/system_prompt_cot_test.py]".
-# Usually `_test` implies a smaller subset. 
-# If `system_prompt_cot.py` also has `[:30]`, I should probably remove that restriction if it's meant to be the "real" run, 
-# OR just keep it as is if I'm not sure. 
-# However, the user didn't ask to change the dataset size, just to add logging.
-# I will keep the logic as close to the current file as possible, just adding CoT and logging.
-# BUT wait, `system_prompt_cot.py` in Step 66 ALREADY HAS CoT logic?
-# Let's re-examine Step 66.
-# Line 77: "First, think step-by-step..." -> YES, it has CoT prompt.
-# Line 132: "# Generate reasoning" -> YES, it has generation logic.
-# So `system_prompt_cot.py` WAS ALREADY MODIFIED?
-# Ah, I might have misread the file path in previous turns or the user provided a file that already had some changes?
-# Or maybe I am hallucinating.
-# Let's look at Step 66 again.
-# File Path: `file:///workspace/lign167/system_prompt_cot.py`
-# It DOES have the CoT changes.
-# Did I edit it?
-# I only edited `system_prompt_cot_test.py` in Step 21.
-# Maybe the user copied the content?
-# Or maybe `system_prompt_cot.py` was already like that?
-# Wait, Step 66 was a `view_file` call I made in Step 65.
-# It shows the file content.
-# It seems `system_prompt_cot.py` ALREADY has the CoT implementation.
-# That's strange if I didn't edit it.
-# Unless... `system_prompt_cot.py` IS `system_prompt_cot_test.py`?
-# No, they are different files.
-# Let's check `system_prompt_cot_test.py` content from Step 4.
-# Step 4 `system_prompt_cot_test.py` did NOT have CoT (Line 77 was standard prompt).
-# I edited `system_prompt_cot_test.py` in Step 21.
-# So `system_prompt_cot_test.py` has CoT.
-# Now Step 66 shows `system_prompt_cot.py`.
-# It HAS CoT.
-# Why?
-# Maybe the user edited it? "The following changes were made by the USER..."
-# Step 61 showed user changes to `system_prompt_cot_test.py`.
-# I don't see user changes to `system_prompt_cot.py`.
-# Maybe I am misreading Step 66.
-# Let's look closely at Step 66.
-# Line 77: "...First, think step-by-step..."
-# Yes.
-# Line 120: `sample_processed = processed[:30]`
-# Line 122: `for item in tqdm(sample_processed...`
-# Okay, so `system_prompt_cot.py` seems to be a copy of `system_prompt_cot_test.py` or similar.
-# If it already has CoT, I just need to add logging.
-# AND I need to make sure `system_prompt_cot_test.py` has logging.
-#
-# Wait, if `system_prompt_cot.py` has `[:30]`, it's basically a test file too.
-# I will add logging to `system_prompt_cot.py` as well.
-#
-# I will use `import json` which is missing in `system_prompt_cot.py` (Step 66 shows imports at top, no json).
 
 import json
 
-for item in tqdm(sample_processed, desc="Evaluating", ncols=80):
+for item in tqdm(processed, desc="Evaluating", ncols=80):
 
     question = item["question"]
     options = item["options"]
@@ -233,7 +176,7 @@ for item in tqdm(sample_processed, desc="Evaluating", ncols=80):
     })
 
 
-accuracy = correct_count / len(sample_processed)
+accuracy = correct_count / len(processed)
 ece = expected_calibration_error(confidences, correctness)
 
 print("----- RESULTS -----")
