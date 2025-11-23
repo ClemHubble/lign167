@@ -9,6 +9,25 @@ print("CUDA available:", torch.cuda.is_available())
 print("Device:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU")
 
 def expected_calibration_error(confidences, correctness, num_bins=15):
+    """
+    Computes the Expected Calibration Error (ECE) for a set of predictions.
+
+    The ECE measures how well a model's predicted confidence scores match the
+    true empirical accuracies. Predictions are grouped into bins over the
+    interval [0, 1], and the discrepancy between average confidence and
+    average accuracy in each bin is weighted by the bin's relative size.
+
+    Args:
+        confidences: a list or array of predicted confidence scores in [0, 1].
+        correctness: a list or array of binary indicators where 1 denotes a
+                     correct prediction and 0 denotes an incorrect one.
+        num_bins:    the number of equally sized bins used to partition the
+                     confidence interval, default is 15.
+
+    Returns:
+        the expected calibration error computed over the given predictions.
+    """
+
     confidences = np.array(confidences)
     correctness = np.array(correctness)
 
@@ -72,6 +91,25 @@ for q, opts, ans_text in zip(ds["question"], ds["choices"], ds["answer"]):
     })
 
 def format_query(question, choices):
+    """
+    Formats a multiple-choice clinical question into a standardized prompt
+    conditioned with a system-level instruction for medical reasoning.
+
+    The function prepends a detailed system prompt that frames the model as a
+    board-certified physician and enforces evidence-based, non-hallucinatory
+    reasoning. It then appends the question text, enumerates the provided
+    answer choices using letter labels, and ends with an
+    "Answer:" tag to signal where the model should output its final choice.
+
+    Args:
+        question: a string containing the clinical question to be answered.
+        choices:  a list of answer-choice strings to be labeled and included
+                  in the formatted prompt.
+
+    Returns:
+        a single formatted string containing the system prompt, question,
+        labeled choices, and an answer field for model inference.
+    """
     system_prompt = "You are a board-certified physician with deep expertise in internal medicine. You answer clinical questions using evidence-based guidelines, pathophysiology, and differential diagnosis. Carefully analyze the question, eliminate incorrect options, and choose the BEST answer based strictly on medical knowledge. If the question lacks sufficient information, state your assumption explicitly. Never fabricate facts or conditions not stated in the question. Respond ONLY with the letter corresponding to the correct answer."
 
     text = system_prompt
@@ -86,6 +124,32 @@ def format_query(question, choices):
 
 
 def score_option(model, tokenizer, prompt, letter):
+    """
+    Computes a scalar score for a candidate answer option by evaluating the
+    model's negative log-likelihood (NLL) of generating that option given a
+    formatted prompt.
+
+    The function appends an answer string of the form ``"Answer: <letter>"`` to
+    the prompt, tokenizes both components, and constructs a full input sequence.
+    All prompt tokens are masked in the label tensor (set to –100) so that the
+    loss is computed **only** over the answer tokens. The returned score is the
+    negative of the NLL, so higher values indicate that the model assigns higher
+    probability to the candidate answer.
+
+    Args:
+        model:     a Hugging Face causal language model used to compute the
+                   conditional log-likelihood of the answer.
+        tokenizer: the tokenizer associated with the model, used to encode both
+                   the prompt and the answer text.
+        prompt:    a string representing the full question prompt (including
+                   system instruction, question, and choices).
+        letter:    a character specifying the answer option to score.
+
+    Returns:
+        a float representing the negative log-likelihood of the model generating
+        the given answer option conditioned on the prompt.
+    """
+
     # Build answer text
     answer_text = f"Answer: {letter}"
 
